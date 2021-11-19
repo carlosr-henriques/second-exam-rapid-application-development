@@ -36,7 +36,7 @@ def view(matricula):
     return linhas
 
 def delete(matricula):
-    conn = sqlite3.connect('C:\\Users\\carlos.ozorio\\Desktop\\Agenda\\livros.db')
+    conn = sqlite3.connect('.\\livros.db')
     cursor = conn.cursor()
     cursor.execute('DELETE FROM aluno WHERE matricula = ?' ,(matricula,))
     conn.commit()
